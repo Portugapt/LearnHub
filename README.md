@@ -1,5 +1,5 @@
 # [LearnHub](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-## My repository for learning, commenting and overall side projects
+My repository for learning, commenting and overall side projects
 
 
 ### [Git Commit](https://chris.beams.io/posts/git-commit/)
