@@ -1,8 +1,9 @@
 # [LearnHub](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 My repository for learning, commenting and overall side projects
+- [LearnHub](#learnhub)
+  - [Git Commit](#git-commit)
 
-
-### [Git Commit](https://chris.beams.io/posts/git-commit/)
+## [Git Commit](https://chris.beams.io/posts/git-commit/)
 
 * If applied, this commit **__will your subject line here__**
 
