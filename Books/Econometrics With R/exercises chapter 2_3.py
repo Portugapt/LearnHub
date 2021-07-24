@@ -5,6 +5,10 @@ import numpy as np
 
 import scipy.stats as st
 
+# https://www.statsmodels.org/stable/gettingstarted.html
+# https://docs.scipy.org/doc/scipy/reference/stats.html
+
+
 #set seed
 random.seed(777)
 
@@ -30,3 +34,12 @@ class new_pdf(st.rv_continuous):
 new_pdf_object = new_pdf(a = 0, b = np.inf)
 print(f'Expected Value: {new_pdf_object.expect()}')
 print(f'Variance: {new_pdf_object.var()}')
+
+## 4 Standard Normal Distribution I
+# Compute ϕ(3), that is, the value of the standard normal density at c=3.
+normDist = st.norm()
+print(normDist.pdf(3))
+
+## 5 Compute P(|Z|≤1.64)
+
+print(normDist.cdf(1.64) - normDist.cdf(-1.64))
