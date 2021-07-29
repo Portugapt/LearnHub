@@ -25,3 +25,4 @@ Through the API we can load data into BigQuery
 
 ![alt text](./Img11.png "k")
 
+[Github Demo on Repeated Fields](https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/courses/data-engineering/demos/nested.md)
