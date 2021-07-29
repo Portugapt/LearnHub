@@ -22,7 +22,7 @@ Empty
 
 ## Instructions 3
 
-COpy paste in shells.
+Copy paste in shell.
 
 ## Instructions 4
 
@@ -66,6 +66,3 @@ echo "Authorizing [$ips] to access cloudsql=$CLOUDSQL"
 gcloud sql instances patch $CLOUDSQL --authorized-networks $ips
 ```
 
-SQL address: 35.184.149.238
-
-Conn name: qwiklabs-gcp-03-e0a351dec65e:us-central1:rentals

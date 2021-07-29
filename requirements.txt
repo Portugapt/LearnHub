@@ -3,3 +3,6 @@ statsmodels==0.12.2
 pandas==1.2.5
 scipy==1.7.0 
 pyspark==3.1.2
+jupyterlab==3.0.16
+ipykernel==6.0.3
+cloudpickle==1.6.0
