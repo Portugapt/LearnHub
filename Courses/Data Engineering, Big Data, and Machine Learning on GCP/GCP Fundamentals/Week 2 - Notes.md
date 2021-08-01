@@ -53,5 +53,3 @@ Cloud SQL and Cloud Dataproc offer familiar tools (MySQL and Hadoop/Pig/Hive/Spa
 
 
 ## AutoML Vision
-
-gs://qwiklabs-gcp-02-21199c9349ec-vcm/data.csv
