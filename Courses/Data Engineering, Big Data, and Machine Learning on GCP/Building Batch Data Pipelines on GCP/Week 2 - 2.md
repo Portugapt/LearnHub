@@ -106,4 +106,7 @@ Q2.
 | __ 2. PCollection 	| B. A data processing operation or step in your pipeline 	|
 | __ 3. Sink        	| C. A set of data in your pipeline                       	|
 
+1.B  
+2.C  
+3.A  
 
