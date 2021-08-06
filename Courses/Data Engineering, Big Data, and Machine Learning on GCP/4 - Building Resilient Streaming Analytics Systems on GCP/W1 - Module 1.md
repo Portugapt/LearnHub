@@ -39,3 +39,7 @@ For example with a container getting fed, and distributing to the other services
 -----------
 
 ![alt text](./imgs//w1/img7.png "Image")
+
+![alt text](./imgs//w1/img8.png "Image")
+
+![alt text](./imgs//w1/img9.png "Image")
