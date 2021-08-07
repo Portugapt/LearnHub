@@ -9,9 +9,6 @@ In this lab, you will perform the following tasks:
 * Open an HBase shell to query the Bigtable database.
 
 
-qwiklabs-gcp-04-1082b8c82069
-
-
 ## Preparation
 
 ```bash
