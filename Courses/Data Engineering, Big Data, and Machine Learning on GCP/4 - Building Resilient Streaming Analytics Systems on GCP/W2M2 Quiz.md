@@ -23,3 +23,14 @@ Which of the following can help improve performance of Bigtable?
 - [X] Clients and Bigtable are in same zone
 - [ ] Use HDD instead of SDD 
 - [X] Add more nodes
+
+
+# BigQuery advanced functionality and performance considerations
+
+Q1
+Which of the following practices help optimize BigQuery queries? 
+
+- [X] Put the largest table on the left
+- [X] Filter early and often
+- [ ] Use COUNT(DISTINCT) instead of APPROX_COUNT_DISTINCT
+- [X] Avoid using unnecessary columns
