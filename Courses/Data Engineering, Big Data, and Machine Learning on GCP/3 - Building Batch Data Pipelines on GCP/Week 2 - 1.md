@@ -2,7 +2,6 @@
 
 https://googlecoursera.qwiklabs.com/focuses/16999352
 
-     cloud-datafusion-management-sa@i5e7585719848e1e2-tp.iam.gserviceaccount.com 
 
 JEXL expressions
 
@@ -34,8 +33,6 @@ Cloud Data Fusion is the ideal solution when you need
 ---
 
 ## Lab
-
-qwiklabs-gcp-01-02d094282133
 
 Orquestrator flow
 
