@@ -94,7 +94,7 @@ from google.cloud import storage, language_v1, bigquery
 storage_client = storage.Client()
 nl_client = language_v1.LanguageServiceClient()
 # TODO: replace YOUR_PROJECT with your project id below
-bq_client = bigquery.Client(project='qwiklabs-gcp-04-ac58cd2b31b9')
+bq_client = bigquery.Client(project='my_project')
 
 dataset_ref = bq_client.dataset('news_classification_dataset')
 dataset = bigquery.Dataset(dataset_ref)

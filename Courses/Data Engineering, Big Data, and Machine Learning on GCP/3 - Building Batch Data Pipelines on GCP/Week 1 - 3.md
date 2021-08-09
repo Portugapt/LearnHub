@@ -1,10 +1,5 @@
 # Lab: Running Apache Spark jobs on Cloud Dataproc 
 
-student-02-99d6402d5183@qwiklabs.net
-
-qwiklabs-gcp-00-e03d5cfc90eb
-
-
 
 Get the dataproc cluster created name
 ```bash
