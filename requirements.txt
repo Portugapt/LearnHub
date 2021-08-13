@@ -5,6 +5,7 @@ pandas==1.2.5
 # Multi application Tools
 ## Machine Learning and Data Wrangling
 pyspark==3.1.2
+pyarrow==5.0.0
 scikit_learn==0.24.2
 
 # Notebooks 

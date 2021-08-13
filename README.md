@@ -2,6 +2,7 @@
 My repository for learning, commenting and overall side projects
 - [LearnHub](#learnhub)
   - [Git Commit](#git-commit)
+  - [Jupyter Notebooks](#jupyter-notebooks)
 
 ## [Git Commit](https://chris.beams.io/posts/git-commit/)
 
@@ -14,3 +15,7 @@ For example:
   * If applied, this commit will **__remove deprecated methods__**
   * If applied, this commit will **__release version 1.0.0__**
   * If applied, this commit will **__merge pull request #123 from user/branch__**
+
+## Jupyter Notebooks
+
+https://towardsdatascience.com/how-to-effortlessly-optimize-jupyter-notebooks-e864162a06ee
