@@ -1,6 +1,8 @@
 # Basic Libraries
 numpy==1.21.0
 pandas==1.2.5
+xlrd==2.0.1
+openpyxl==3.0.7
 
 # Multi application Tools
 ## Machine Learning and Data Wrangling
