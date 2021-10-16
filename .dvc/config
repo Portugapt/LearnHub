@@ -1,0 +1,4 @@
+[core]
+    remote = learnhubstorage
+['remote "learnhubstorage"']
+    url = gdrive://1y2eyngtPTqT_bpAxQ8uE3PDg-WK4fSJ5
