@@ -1,0 +1,145 @@
+Feature A,Feature B,Correlation
+fixed acidity,fixed acidity,1.0
+fixed acidity,volatile acidity,-0.26027333869593816
+fixed acidity,citric acid,0.6838054949034026
+fixed acidity,residual sugar,0.1383196201981956
+fixed acidity,chlorides,0.09422892793865713
+fixed acidity,free sulfur dioxide,-0.16116475612582656
+fixed acidity,total sulfur dioxide,-0.11264005014795793
+fixed acidity,density,0.6734855939394103
+fixed acidity,pH,-0.6873705119625841
+fixed acidity,sulphates,0.18225159052226328
+fixed acidity,alcohol,-0.0555006923231005
+fixed acidity,quality,0.12607681773603968
+volatile acidity,fixed acidity,-0.26027333869593816
+volatile acidity,volatile acidity,1.0
+volatile acidity,citric acid,-0.5539510499164448
+volatile acidity,residual sugar,0.04677515388618296
+volatile acidity,chlorides,0.07044902947773347
+volatile acidity,free sulfur dioxide,-0.004455059392605455
+volatile acidity,total sulfur dioxide,0.09692077792563235
+volatile acidity,density,0.02286459514698141
+volatile acidity,pH,0.23285582132151617
+volatile acidity,sulphates,-0.26990730001010554
+volatile acidity,alcohol,-0.2025625732132967
+volatile acidity,quality,-0.3932860663838822
+citric acid,fixed acidity,0.6838054949034026
+citric acid,volatile acidity,-0.5539510499164448
+citric acid,citric acid,1.0
+citric acid,residual sugar,0.13839736957774404
+citric acid,chlorides,0.175220352236902
+citric acid,free sulfur dioxide,-0.07848833584407383
+citric acid,total sulfur dioxide,0.011498342465288773
+citric acid,density,0.37426070577359416
+citric acid,pH,-0.5360327014871832
+citric acid,sulphates,0.3026720618108804
+citric acid,alcohol,0.11357007114794171
+citric acid,quality,0.23340959279716644
+residual sugar,fixed acidity,0.1383196201981956
+residual sugar,volatile acidity,0.04677515388618296
+residual sugar,citric acid,0.13839736957774404
+residual sugar,residual sugar,1.0
+residual sugar,chlorides,0.022330463510483928
+residual sugar,free sulfur dioxide,0.1039934730484252
+residual sugar,total sulfur dioxide,0.14440082867152923
+residual sugar,density,0.34413848055251706
+residual sugar,pH,-0.06259248649925998
+residual sugar,sulphates,0.010474629163409384
+residual sugar,alcohol,0.10502927566233522
+residual sugar,quality,0.01711505054614789
+chlorides,fixed acidity,0.09422892793865713
+chlorides,volatile acidity,0.07044902947773347
+chlorides,citric acid,0.175220352236902
+chlorides,residual sugar,0.022330463510483928
+chlorides,chlorides,1.0
+chlorides,free sulfur dioxide,-0.02160687066744336
+chlorides,total sulfur dioxide,0.05011640558201341
+chlorides,density,0.18953153141970658
+chlorides,pH,-0.2492374223915931
+chlorides,sulphates,0.32278451423060844
+chlorides,alcohol,-0.2184501771266312
+chlorides,quality,-0.11870046580152008
+free sulfur dioxide,fixed acidity,-0.16116475612582656
+free sulfur dioxide,volatile acidity,-0.004455059392605455
+free sulfur dioxide,citric acid,-0.07848833584407383
+free sulfur dioxide,residual sugar,0.1039934730484252
+free sulfur dioxide,chlorides,-0.02160687066744336
+free sulfur dioxide,free sulfur dioxide,1.0
+free sulfur dioxide,total sulfur dioxide,0.671679540978833
+free sulfur dioxide,density,-0.050617994521445914
+free sulfur dioxide,pH,0.08652933842326962
+free sulfur dioxide,sulphates,0.049093400713941665
+free sulfur dioxide,alcohol,-0.06235543367434659
+free sulfur dioxide,quality,-0.05846786232510147
+total sulfur dioxide,fixed acidity,-0.11264005014795793
+total sulfur dioxide,volatile acidity,0.09692077792563235
+total sulfur dioxide,citric acid,0.011498342465288773
+total sulfur dioxide,residual sugar,0.14440082867152923
+total sulfur dioxide,chlorides,0.05011640558201341
+total sulfur dioxide,free sulfur dioxide,0.671679540978833
+total sulfur dioxide,total sulfur dioxide,1.0
+total sulfur dioxide,density,0.08237586015527376
+total sulfur dioxide,pH,-0.048476050250840036
+total sulfur dioxide,sulphates,0.05268085819902745
+total sulfur dioxide,alcohol,-0.22843599038662404
+total sulfur dioxide,quality,-0.20863842367950472
+density,fixed acidity,0.6734855939394103
+density,volatile acidity,0.02286459514698141
+density,citric acid,0.37426070577359416
+density,residual sugar,0.34413848055251706
+density,chlorides,0.18953153141970658
+density,free sulfur dioxide,-0.050617994521445914
+density,total sulfur dioxide,0.08237586015527376
+density,density,1.0
+density,pH,-0.3423913292394487
+density,sulphates,0.14078262628734045
+density,alcohol,-0.48769291149276656
+density,quality,-0.1744545383876691
+pH,fixed acidity,-0.6873705119625841
+pH,volatile acidity,0.23285582132151617
+pH,citric acid,-0.5360327014871832
+pH,residual sugar,-0.06259248649925998
+pH,chlorides,-0.2492374223915931
+pH,free sulfur dioxide,0.08652933842326962
+pH,total sulfur dioxide,-0.048476050250840036
+pH,density,-0.3423913292394487
+pH,pH,1.0
+pH,sulphates,-0.18077208551080914
+pH,alcohol,0.2051593650372998
+pH,quality,-0.06112382755777534
+sulphates,fixed acidity,0.18225159052226328
+sulphates,volatile acidity,-0.26990730001010554
+sulphates,citric acid,0.3026720618108804
+sulphates,residual sugar,0.010474629163409384
+sulphates,chlorides,0.32278451423060844
+sulphates,free sulfur dioxide,0.049093400713941665
+sulphates,total sulfur dioxide,0.05268085819902745
+sulphates,density,0.14078262628734045
+sulphates,pH,-0.18077208551080914
+sulphates,sulphates,1.0
+sulphates,alcohol,0.10823799159976703
+sulphates,quality,0.27359510268566745
+alcohol,fixed acidity,-0.0555006923231005
+alcohol,volatile acidity,-0.2025625732132967
+alcohol,citric acid,0.11357007114794171
+alcohol,residual sugar,0.10502927566233522
+alcohol,chlorides,-0.2184501771266312
+alcohol,free sulfur dioxide,-0.06235543367434659
+alcohol,total sulfur dioxide,-0.22843599038662404
+alcohol,density,-0.48769291149276656
+alcohol,pH,0.2051593650372998
+alcohol,sulphates,0.10823799159976703
+alcohol,alcohol,1.0
+alcohol,quality,0.4776299145656086
+quality,fixed acidity,0.12607681773603968
+quality,volatile acidity,-0.3932860663838822
+quality,citric acid,0.23340959279716644
+quality,residual sugar,0.01711505054614789
+quality,chlorides,-0.11870046580152008
+quality,free sulfur dioxide,-0.05846786232510147
+quality,total sulfur dioxide,-0.20863842367950472
+quality,density,-0.1744545383876691
+quality,pH,-0.06112382755777534
+quality,sulphates,0.27359510268566745
+quality,alcohol,0.4776299145656086
+quality,quality,1.0

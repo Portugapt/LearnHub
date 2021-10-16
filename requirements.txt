@@ -1,30 +1,36 @@
-# Basic Libraries
+## Data Wrangling
 numpy==1.21.0
 pandas==1.2.5
-xlrd==2.0.1
-openpyxl==3.0.7
-
-# Multi application Tools
-## Machine Learning and Data Wrangling
 pyspark==3.1.2
 pyarrow==5.0.0
-scikit_learn==0.24.2
 
-# Notebooks 
+# Ops
+mlflow==1.20.2
+apache-airflow==2.2.0 
+
+## Statistics
+scipy==1.7.0
+
+## Notebooks 
 jupyterlab==3.0.16
 ipykernel==6.0.3
 
-# Statistics
-scipy==1.7.0
+# Visualization
+matplotlib==3.1.1
+seaborn==0.11.2
+
+## Modeling
+scikit_learn==0.24.2
+statsmodels==0.12.2
+pytorch_tabnet==3.1.1
 
 # Model evaluation
 eli5==0.11.0
 PDPbox==0.2.1 # Installs matplotlib-3.1.1
 shap==0.39.0
-statsmodels==0.12.2
-
-# Visualization
-matplotlib==3.4.2
 
 # Misc
+streamlit==0.87.0
 cloudpickle==1.6.0
+xlrd==2.0.1
+openpyxl==3.0.7

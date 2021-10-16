@@ -2,5 +2,14 @@
 
 1. Visualization
     * Question: 
-        * Outliers?
+        * Outliers
+        * Multicollinearity
+        * Feature Engineering
+
+2. Variable selection
+    
+3. Modeling
+    * Store results
+        * How?
+       
     
