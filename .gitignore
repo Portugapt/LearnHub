@@ -4,11 +4,14 @@ News.md
 .dvc/*
 auth/*
 
+**/.ipynb_checkpoints/**
+
 .Rproj.user
 medium links.md
-Tools/*/*.pdf
-Books/Learning Spark: Lightning-Fast Data Analytics/.ipynb_checkpoints/Book-checkpoint.pdf
 
 Snippets/*
 
 *.pdf
+Tools/*/*.pdf
+Books/Learning Spark: Lightning-Fast Data Analytics/.ipynb_checkpoints/Book-checkpoint.pdf
+
