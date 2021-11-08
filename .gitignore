@@ -1,6 +1,8 @@
 todo.md
 News.md
 
+.dvc/*
+
 .Rproj.user
 medium links.md
 Tools/*/*.pdf
