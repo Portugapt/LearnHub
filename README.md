@@ -3,6 +3,7 @@ My repository for learning, commenting and overall side projects
 - [LearnHub](#learnhub)
   - [Git Commit](#git-commit)
   - [Jupyter Notebooks](#jupyter-notebooks)
+  - [Spin the wheel on Authetication](#spin-the-wheel-on-authetication)
 
 ## [Git Commit](https://chris.beams.io/posts/git-commit/)
 
@@ -19,3 +20,11 @@ For example:
 ## Jupyter Notebooks
 
 https://towardsdatascience.com/how-to-effortlessly-optimize-jupyter-notebooks-e864162a06ee
+
+## Spin the wheel on Authetication
+
+https://mkyong.com/linux/how-to-set-environment-variable-in-ubuntu/
+
+```bash
+source ./auth/mlflow.sh
+```

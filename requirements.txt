@@ -1,8 +1,13 @@
 ## Data Wrangling
 numpy==1.21.0
 pandas==1.2.5
-pyspark==3.1.2
 pyarrow==5.0.0
+
+# Data storage
+psycopg2==2.9.1
+pyspark==3.1.2
+google-cloud-storage==1.42.3
+"dvc[gs]"
 
 # Ops
 mlflow==1.20.2
