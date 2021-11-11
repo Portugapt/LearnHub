@@ -1,4 +1,22 @@
-
+- [Deployment patterns](#deployment-patterns)
+  - [Common deployment patterns](#common-deployment-patterns)
+    - [Shadow mode deployment](#shadow-mode-deployment)
+    - [Canary deployment](#canary-deployment)
+    - [Blue/Green deployment](#bluegreen-deployment)
+  - [Degrees of automation](#degrees-of-automation)
+- [Monitoring](#monitoring)
+  - [Tool: Monitoring dashboard](#tool-monitoring-dashboard)
+  - [Set of metrics (Audio example)](#set-of-metrics-audio-example)
+  - [ML Deployment is iterative](#ml-deployment-is-iterative)
+  - [Update a model](#update-a-model)
+- [Pipeline monitoring](#pipeline-monitoring)
+  - [Questions](#questions)
+- [Graded assignment](#graded-assignment)
+  - [1. You’ve built a new system for making loan approval decisions. For now, its output is not used in any decision making process, and a human loan officer is solely responsible for deciding what loans to approve. But the system’s output is logged for analysis. What is this type of deployment called?](#1-youve-built-a-new-system-for-making-loan-approval-decisions-for-now-its-output-is-not-used-in-any-decision-making-process-and-a-human-loan-officer-is-solely-responsible-for-deciding-what-loans-to-approve-but-the-systems-output-is-logged-for-analysis-what-is-this-type-of-deployment-called)
+  - [2. On a new social media platform, you’re rolling out a new anti-spam system to flag and hide spammy posts. Your team decides to roll out the anti-spam filter via a canary deployment, and roll it out to 1% of users initially. Which of these would you advocate?](#2-on-a-new-social-media-platform-youre-rolling-out-a-new-anti-spam-system-to-flag-and-hide-spammy-posts-your-team-decides-to-roll-out-the-anti-spam-filter-via-a-canary-deployment-and-roll-it-out-to-1-of-users-initially-which-of-these-would-you-advocate)
+  - [3. You’re building a healthcare screening system, where you input a patient’s symptoms, and for the easy cases (such as an obvious case of the common cold) the system will give a recommendation directly, and for the harder cases it will pass the case on to a team of in-house doctors who will form their own diagnosis independently. What degree of automation are you implementing in this example for patient care?](#3-youre-building-a-healthcare-screening-system-where-you-input-a-patients-symptoms-and-for-the-easy-cases-such-as-an-obvious-case-of-the-common-cold-the-system-will-give-a-recommendation-directly-and-for-the-harder-cases-it-will-pass-the-case-on-to-a-team-of-in-house-doctors-who-will-form-their-own-diagnosis-independently-what-degree-of-automation-are-you-implementing-in-this-example-for-patient-care)
+  - [4. You have built and deployed an anti-spam system that inputs an email and outputs either 0 or 1 based on whether the email is spam. Which of these will result in either concept drift or data drift?](#4-you-have-built-and-deployed-an-anti-spam-system-that-inputs-an-email-and-outputs-either-0-or-1-based-on-whether-the-email-is-spam-which-of-these-will-result-in-either-concept-drift-or-data-drift)
+  - [5. Which of these statements is a more accurate description of deployment?](#5-which-of-these-statements-is-a-more-accurate-description-of-deployment)
 # Questions
 ------------
 ------------
