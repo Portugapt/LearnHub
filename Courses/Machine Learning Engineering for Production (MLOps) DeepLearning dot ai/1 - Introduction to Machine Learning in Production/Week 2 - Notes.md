@@ -27,6 +27,7 @@
   - [3. True or False? During error analysis, each example should only be assigned one tag. For example, in a speech recognition application you may have the tags: “car noise”, “people noise” and “low bandwidth”. If you encounter an example with both car noise and low bandwidth audio, you should use your judgement to assign just one of these two tags rather than apply both tags.](#3-true-or-false-during-error-analysis-each-example-should-only-be-assigned-one-tag-for-example-in-a-speech-recognition-application-you-may-have-the-tags-car-noise-people-noise-and-low-bandwidth-if-you-encounter-an-example-with-both-car-noise-and-low-bandwidth-audio-you-should-use-your-judgement-to-assign-just-one-of-these-two-tags-rather-than-apply-both-tags)
   - [4. You are building a visual inspection system. Error analysis finds:](#4-you-are-building-a-visual-inspection-system-error-analysis-finds)
   - [5. You’re considering applying data augmentation to a phone visual inspection problem. Which of the following statements are true about data augmentation? (Select all that apply)](#5-youre-considering-applying-data-augmentation-to-a-phone-visual-inspection-problem-which-of-the-following-statements-are-true-about-data-augmentation-select-all-that-apply)
+- [Notes on Colab notebook](#notes-on-colab-notebook)
 
 # Questions
 
@@ -327,3 +328,18 @@ Data iteration process
 - [ ] Data augmentation should try to generate more examples in the parts of the input space where the algorithm is already doing well and there’s no need for improvement.
 
 - [X] Data augmentation should try to generate more examples in the parts of the input space where you’d like to see improvement in the algorithm’s performance. 
+
+
+# Notes on Colab notebook
+
+Will just copy paste some parts.
+
+>If you didn't fix this before training you will get errors regarding these issues and training will fail. Zero-byte images are not valid images and Keras will let you know once these files are reached. In a similar way .db files are not valid images. **It is a good practice to always make sure that you are submitting files with the correct specifications to your training algorithm before start running it** as these issues might not be encountered right away and you will have to solve them and start training again.
+
+>Class imbalance is a real problem that if not detected early on, gives the wrong impression that your model is performing better than it actually is. For this reason, is important to rely on several metrics that do a better job at capturing these kinds of issues. **In this case the standard accuracy metric is misleading and provides a false sense that the model is performing better than it actually is.**
+
+>There are several techniques to deal with class imbalance. A very popular one is `SMOTE`, which oversamples the minority classes by creating syntethic data. However, these techniques are outside the scope of this lab.
+
+>Now, the evaluation accuracy follows more closely the training one. This indicates that the model is no longer overfitting. Quite a remarkable finding, achieved by just augmenting the data set. Another option to handle overfitting is to include dropout layers in your model as mentioned earlier.
+
+>Another point worth mentioning, is that this model achieves a slightly lower evaluation accuracy when compared to the model without data augmentation. The reason for this, is that this model needs more epochs to train. To spot this issue, check that for the model without data augmentation, the training accuracy reached almost 100%, whereas the augmented one can still improve.
