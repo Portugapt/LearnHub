@@ -1,3 +1,17 @@
+- [Manipulating files and directories](#manipulating-files-and-directories)
+- [Sheet of commands](#sheet-of-commands)
+- [Notes](#notes)
+  - [Can I stop a running program?](#can-i-stop-a-running-program)
+- [Combine commands](#combine-commands)
+- [Wildcards](#wildcards)
+  - [*](#)
+  - [Other wildcards](#other-wildcards)
+- [Do many things in a loop](#do-many-things-in-a-loop)
+- [Create a file with `nano`](#create-a-file-with-nano)
+- [Save commands history and rerun them](#save-commands-history-and-rerun-them)
+- [Parameters in a bash file](#parameters-in-a-bash-file)
+- [Re-run piles](#re-run-piles)
+
 # Manipulating files and directories 
 
 https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1
@@ -110,6 +124,16 @@ wc # word count
 sort
 # e.g. cut -d , -f 2 seasonal/spring.csv | grep -v Tooth | sort -r
 
+# If I want to know the saved commands?
+set 
+
+# If I want to define a new local variable in the shell
+name_of_variable = value_of_varialbe
+# to call is $name_of_variable
+
+# If I want to repeat commands
+for filetype in gif jpg png; do echo $filetype; done
+
 ```
 
 # Notes
@@ -153,3 +177,71 @@ e.g `head seasonal/s*.csv` or `head seasonal/*.csv`
 * `[...]` matches any one of the characters inside the square brackets, so `201[78].txt` matches 
 
 * `{...}` matches any of the comma-separated patterns inside the curly brackets, so `{*.txt, *.csv}` matches any file whose name ends with `.txt` or `.csv`, but not files whose names end with `.pdf`
+
+
+# Do many things in a loop
+
+Be careful for the `;` character.
+
+With the code example  
+`for f in seasonal/*.csv; do echo $f; head -n 2 $f | tail -n 1; done`  
+the result is
+```
+seasonal/autumn.csv
+2017-01-05,canine
+seasonal/spring.csv
+2017-01-25,wisdom
+seasonal/summer.csv
+2017-01-11,canine
+seasonal/winter.csv
+2017-01-03,bicuspid
+```
+
+# Create a file with `nano`
+
+e.g.  
+`nano names.txt`
+
+
+# Save commands history and rerun them
+
+```bash
+history | tail -n 3 > steps.txt
+```
+
+`nano dates.sh`  
+`cut -d , -f 1 seasonal/*.csv`  
+`bash dates.sh`
+
+A file full of shell commands is called a ***shell script**, or sometimes just a "script" for short. Scripts don't have to have names ending in .sh, but this lesson will use that convention to help you keep track of which files are scripts.
+
+Can also direct the output to a file
+e.g.   
+`bash teeth.sh > teeth.out`
+
+# Parameters in a bash file  
+
+To support this, you can use the special expression $@ (dollar sign immediately followed by at-sign) to mean "all of the command-line parameters given to the script".
+
+`count-records.sh`
+```bash
+tail -q -n +2 $@ | wc -l
+```
+
+then run the command  
+`bash count-records.sh seasonal/*.csv > count.out`
+
+As well as `$@`, the shell lets you use `$1`, `$2`, and so on to refer to specific command-line parameters. You can use this to write commands that feel simpler or more natural than the shell's. For example, you can create a script called `column.sh` that selects a single column from a CSV file when the user provides the filename as the first parameter and the column as the second:
+`cut -d , -f $2 $1`
+
+# Re-run piles
+
+`example.sh`   
+```bash
+# Print the first and last data records of each file.
+for filename in $@
+do
+    head -n 2 $filename | tail -n 1
+    tail -n 1 $filename
+done
+```
