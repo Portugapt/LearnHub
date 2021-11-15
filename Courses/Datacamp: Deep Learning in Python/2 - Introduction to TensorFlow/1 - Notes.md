@@ -88,7 +88,7 @@ matmul(TensorObject1, TensorObject2)
 reduce_sum
 ```
 
+
 <iframe
   src="https://colab.research.google.com/github/Portugapt/LearnHub-Public/blob/main/Embedded-tfTensors.ipynb"
->
-</iframe>
+></iframe>
