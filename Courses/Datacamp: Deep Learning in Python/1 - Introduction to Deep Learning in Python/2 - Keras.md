@@ -10,6 +10,7 @@
     - [Optimizers](#optimizers)
   - [Early stopping](#early-stopping)
   - [An almost complete boilerplate](#an-almost-complete-boilerplate)
+- [Estimators API](#estimators-api)
 
 ## Specificating a model
 
@@ -222,3 +223,16 @@ plt.show()
 ```
 
 
+# Estimators API
+
+![EAPI](https://i.imgur.com/P1IjvvF.png)
+
+![dfcolumns](https://i.imgur.com/w5uQUR1.png)
+
+![dfcolumns2](https://i.imgur.com/MnrJuvR.png)
+
+![etl](https://i.imgur.com/tCXAife.png )
+
+![auto](https://i.imgur.com/bPl04Bg.png)
+
+Or DNNClassifier
