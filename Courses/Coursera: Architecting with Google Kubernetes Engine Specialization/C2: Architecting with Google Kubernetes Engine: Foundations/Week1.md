@@ -1,3 +1,11 @@
+
+Set computation (VM's) zone.
+
+`gcloud config set compute/zone $MY_ZONE`
+
+Set roles through shell
+`gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member serviceAccount:test-service-account2@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com --role roles/viewer`
+
 # Cloud Build Lab
 
 `nano quickstart.sh`
@@ -109,3 +117,8 @@ Services provide load-balanced access to specified Pods. There are three primary
 
 In Google Kubernetes Engine, LoadBalancers give you access to a regional Network Load Balancing configuration by default. To get access to a global HTTP(S) Load Balancing configuration, you can use an Ingress object.
 
+# Kubernetes
+
+Navigation menu, click Kubernetes Engine > Clusters.
+
+Criar cluster
