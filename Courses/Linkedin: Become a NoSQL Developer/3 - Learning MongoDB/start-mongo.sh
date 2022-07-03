@@ -1,0 +1,1 @@
+docker run -it --name mongeContainer -p 27017:27017 -v mongo_volume:/data/db -d mongo:latest
