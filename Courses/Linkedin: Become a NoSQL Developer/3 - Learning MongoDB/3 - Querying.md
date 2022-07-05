@@ -55,3 +55,49 @@ Inside an object
 ```js
 db.recipes.find({ "ingredients.name" : "egg"}, {"title" : 1, "tags": 1});
 ```
+
+## Updating documents
+
+![img3](https://i.imgur.com/rjEXXSE.png)
+
+```js
+db.examples.updateOne({"title" : "Pizza"}, { $set : {"title" : "This crust pizza"}})
+// Update a document if key exists
+db.examples.find({}, {"title": 1})
+
+
+db.examples.updateOne({"title" : "This crust pizza"}, { $set : {"vegan" : false}})
+// Update a column if key doesnt exist -> add key
+
+db.examples.updateOne({"title" : "This crust pizza"}, { $unset : {"vegan" : 1}})
+// Update a column if key doesnt exist -> Removes the key. (DOES NOT CHANGE IT TO 1, 1 HERE IS TO "REMOVE? TRUE")
+
+db.examples.updateOne({"title" : "Tacos"}, {$inc : { "likes_count": 1}})
+// here 1 is increment by how much. IN this case, by 1
+db.examples.find({"title" : "Tacos"}).pretty()
+db.examples.updateOne({"title" : "Tacos"}, {$inc : { "likes_count": -1}})
+```
+
+## Updating Arrays
+
+![img4](https://i.imgur.com/C0J2Zzr.png)
+
+```js
+db.examples.updateOne({"title" : "Tacos"}, { $push : {"likes":60}})
+// Push an element to the array "likes"
+db.examples.find({"title" : "Tacos"}).pretty()
+
+db.examples.updateOne({"title" : "Tacos"}, { $pull : {"likes":60}})
+// pull an element
+```
+
+## Deleting Documents
+
+```js
+db.examples.find({}, {"title": 1})
+
+db.examples.deleteOne({ "_id" : ObjectId("5ee69e393260aab97ea0d58e")})
+// delete the document
+
+db.examples.find({}, {"title": 1})
+```
