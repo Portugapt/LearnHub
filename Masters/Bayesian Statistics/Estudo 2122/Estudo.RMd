@@ -1,0 +1,293 @@
+---
+title: "Bayesian Statistics"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    code_folding: hide
+bibliography: references.bib
+---
+
+```{r load packages, echo=FALSE, results='hide', message=FALSE}
+PACKAGE_LIST <- c('ggplot2', 'data.table', 'dplyr')
+## ggplot: ggplot2; geom_line; theme_minimal; facet_wrap; aes
+## dplyr: %>%; rbind
+## data.table: data.table;
+
+NEW_PACKAGES <- PACKAGE_LIST[!PACKAGE_LIST %in% installed.packages()[,'Package']]
+if(length(NEW_PACKAGES)) install.packages(NEW_PACKAGES)
+for(PACKAGE_LOOP_VARIABLE in PACKAGE_LIST){library(PACKAGE_LOOP_VARIABLE, character.only = T)}
+rm(list=c('NEW_PACKAGES', 'PACKAGE_LIST', 'PACKAGE_LOOP_VARIABLE'))
+```
+
+
+# Useful links
+
+* https://latex.codecogs.com/eqneditor/editor.php
+
+* https://bookdown.org/yihui/rmarkdown/html-document.html  
+
+* https://bookdown.org/yihui/rmarkdown/learnr-videos.html
+
+# Syllabus
+
+![](https://i.imgur.com/4Q9wLvz.png)
+https://www.youtube.com/watch?v=U1HbB0ATZ_A
+
+## Conditional Probability, Bayes Theorem and Total Probabilites
+
+![](https://i.imgur.com/s2oIonE.png)
+
+![](https://i.imgur.com/2XvVDvw.png)
+
+## Likelihood
+
+## Conjugate priors {.tabset #conjugates}
+
+In Bayesian probability theory, if the posterior distribution p(θ | x) is in the same probability distribution family as the prior probability distribution p(θ), the prior and posterior are then called conjugate distributions, and the prior is called a conjugate prior for the likelihood function p(x | θ). 
+
+![](https://i.imgur.com/3EqfY9m.png)
+![](https://i.imgur.com/xZ5sqqm.png)
+https://www.youtube.com/watch?v=7mZksQ24MlI
+
+In this case, a Normal prior, turns to a Normal posterior, and a prior Beta turns to a posterior Beta.
+
+### Poisson-Gamma conjugate
+
+https://people.stat.sc.edu/hitchcock/slides535day5spr2014.pdf
+
+![](https://i.imgur.com/NSZ4C3A.png)
+  
+![](https://i.imgur.com/AnIKtrc.png)
+
+#### Exercices
+
+* [Classes](#ref-class)
+  * [EX6 B](#c-ex6)
+
+## Posterior Distribution
+
+![](https://i.imgur.com/ClPbsw7.png)
+
+## Predictive Distributions
+
+![](https://i.imgur.com/FaIju1H.png)
+
+## Credibility Interval {#credibility-intervals}
+
+![](https://i.imgur.com/1SYHN5J.png)
+
+![](https://i.imgur.com/1JBeWuR.png)
+![](https://i.imgur.com/plNXcDp.png)
+https://www.youtube.com/watch?v=vJ-NqIgYJyY
+
+### Poisson - Gamma
+
+![](https://i.imgur.com/T6KYkMm.png)
+
+Reference: [@wolpertconfidence]
+
+### Examples
+
+wait
+
+## Proper and Improper distributions
+
+## Distributions {.tabset #dists}
+
+### Poisson {#d-poisson}
+
+https://bookdown.org/kevin_davisross/bayesian-reasoning-and-methods/poisson.html
+
+A discrete random variable Y has a Poisson distribution with parameter $\theta>0$ if its probability mass function satisfies 
+$$
+\begin{align*}
+f(y|\theta) & = \frac{e^{-\theta}\theta^y}{y!}, \quad y=0,1,2,\ldots
+\end{align*}
+$$
+If $Y$ has a $Poisson(\theta)$ distribution then
+
+$$
+\begin{align*}
+E(Y) & = \theta\\
+Var(Y) & = \theta
+\end{align*}
+$$
+
+### Gamma {#d-gamma}
+
+![](https://i.imgur.com/NJ0QWN2.png)
+#### Expected Mean, Variance 
+
+$$E[\theta | x] = \frac{\alpha}{ \beta}$$
+
+$$Var[\theta | x] = \frac{\alpha}{ \beta^2}$$
+
+#### Examples
+
+Examples of Gamma:
+
+```{r gamma1}
+
+```
+
+#### Exercises:
+
+* [Classes](#ref-class)
+  * [EX6](#c-ex6)
+
+# Exercices
+
+## References - Class Exercices {.tabset #ref-class} 
+
+### Ex4 {#c-ex4}
+
+![](https://i.imgur.com/yZ6gxmn.png)
+
+### Ex5 {#c-ex5}
+
+![](https://i.imgur.com/U9wqgTU.png)
+
+### Ex6 {#c-ex6}
+
+![](https://i.imgur.com/gMgR65a.png)
+
+Solutions:  
+
+* [A](#sol-ex6a)
+* [B](#sol-ex6b)
+* [C](#sol-ex6c)
+* [D](#sol-ex6d)
+
+### Ex7 {#c-ex7}
+
+![](https://i.imgur.com/UqFrA0M.png)
+
+## Identify Prior Distribution
+
+### Ex6 - A {#sol-ex6a}
+
+Question from [Exercice 6 of classes](#ref-class).
+
+If we look at the distribution of [gamma](#dists), we can conclude it's a gamma distribution with parameters:
+$$\theta \sim \Gamma (\mu h, h)$$
+
+## *a posteriori* Distribution 
+
+### Ex6 - B {#sol-ex6b}
+
+Question from [Exercice 6 of classes](#ref-class).
+
+See:  
+
+* [Poisson-Gamma conjugate](#conjugates)
+
+If $\mu = h = 2$, $\sum_{i=1}^{n} x_i = 18$ and $n=6$ then the $a posteriori$ distribution of $\theta$ is
+
+```{r ex6b}
+mu_prior = 2
+h_prior = 2
+
+alpha_prior = mu_prior*h_prior
+beta_prior = h_prior
+
+sum_xi_1 = 18
+n_1 = 6
+
+alpha_posterior = alpha_prior + sum_xi_1
+beta_posterior = beta_prior + n_1
+
+cat("Alpha Posterior:", alpha_posterior, "\nBeta Posterior", beta_posterior)
+```
+
+The *a posteriori* distribution is a $Gamma(22,8)$
+
+### Ex7 - A {#sol-ex7a}
+
+See:   
+
+* [Poisson-Gamma conjugate](#conjugates)
+
+The *a priori* distribution is a $Gamma(2, 1)$ for $\theta_1$ and $\theta_2$. 
+$n_1 = 111 // sum-y_{i,1} = 217 // mean - y_1 = 1.95$  
+$n_2 = 44 // sum-y_{i,1} = 66 // mean - y_1 = 1.5$ 
+
+Knowing the conjugate of a Poisson likelyhood with a prior gamma distribution gives a posterior gamma distribution with the parameters $Gamma(\sum_{i=1}^{n} x_i + \alpha, \beta+n)$, the posterior distributions for $\theta_1$ and $\theta_2$ are:
+
+```{r ex7a}
+ex7_alpha_1_prior = 2
+ex7_beta_1_prior = 1
+
+ex7_alpha_2_prior = 2
+ex7_beta_2_prior = 1
+
+
+```
+
+TODO
+
+## Mean, variance, etc
+
+### Ex6 - C {#sol-ex6c}
+
+Question from [Exercice 6 of classes](#ref-class).
+
+
+```{r ex6c}
+e_mean = 22 / 8
+
+e_var = 22 / ((8)**2) ## 22/64
+
+cat("Expected Mean:", e_mean, "\nExpected Variance", e_var)
+```
+
+## Credible interval
+
+### Ex6 - D {#sol-ex6d}
+
+See:  
+
+* [Credibility Intervals](#credibility-intervals)
+
+![](https://i.imgur.com/8dijc1y.png)
+
+So here, to calculate the credibility interval, we do the following
+
+```{r ex6d1}
+alpha = 22; beta = 8  # parameters of the posterior distribution (Gamma)
+
+qinf_gamma = qgamma(p=0.025,shape=alpha,rate=beta,lower.tail=T)
+qsup_gamma = qgamma(p=0.025,shape=alpha,rate=beta,lower.tail=F)
+cat("Interval: [",qsup_gamma,",",qinf_gamma,"]")
+
+## Alternatively with Gamma
+qsup2_gamma = qgamma(p=0.975,shape=alpha,rate=beta,lower.tail=T)
+cat("Interval: [",qsup2_gamma,",",qinf_gamma,"]")
+```
+
+Visually this means:
+```{r ex6d2, echo=FALSE}
+x_seq = seq(from = 0, to = 6, length.out = 200)
+y_seq = dgamma(x_seq, shape=alpha,rate=beta)
+
+dfEx6 = data.table(
+  x = x_seq,
+  y = y_seq,
+  auc = between(x_seq, qinf_gamma, qsup_gamma)
+)
+
+ggplot(data = dfEx6, aes(x=x, y=y)) +
+  geom_area(aes(fill=auc)) +
+  geom_line() +
+  geom_hline(yintercept=0) + 
+  theme_minimal()
+```
+
+TODO:
+Interpretation of this interval
+
+# References
+
+<div id="refs"></div>
+
