@@ -1,1 +1,1 @@
-docker exec -it redisContainer redis-cli
+docker exec -it redis redis-cli

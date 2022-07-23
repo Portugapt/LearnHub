@@ -1,0 +1,1 @@
+docker run -v ~/Documents/LearnHub/volumes/redis/config:/usr/local/etc/redis -v ~/Documents/LearnHub/volumes/redis/data:/data -p 6380:6380 --name redisreplica redis redis-server /usr/local/etc/redis/redis2.conf

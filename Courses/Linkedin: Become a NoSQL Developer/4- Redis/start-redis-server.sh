@@ -1,1 +1,2 @@
-docker run -it --name redisContainer -v `pwd`/local-data/:/data -p 6379:6379 redis/redis-stack-server:latest
+# docker run -it --name redisContainer -v ~/Documents/LearnHub/volumes/redis/data:/data -v /redis_conf:/usr/local/etc/redis -p 6379:6379 redis redis-server /usr/local/etc/redis/redis.conf
+docker run -v ~/Documents/LearnHub/volumes/redis/config:/usr/local/etc/redis -v ~/Documents/LearnHub/volumes/redis/data:/data -p 6379:6379 --name redis redis redis-server
