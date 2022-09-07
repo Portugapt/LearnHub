@@ -13,7 +13,11 @@ resp = es.index(index="test-index", id=1, document=doc)
 print(resp['result'])
 
 
-###
+##############################
+###                        ###
+###       PUT sales        ###
+###                        ###
+##############################
 
 # GET /_cat/indices?v=true
 
